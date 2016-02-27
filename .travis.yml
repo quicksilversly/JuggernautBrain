@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+  - 2.2.2
+bundler_args: --without-production
+script: 
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
+before_script:
+  - psql -c 'create database juggernaut_brain_test' -U postgres
+cache: bundler

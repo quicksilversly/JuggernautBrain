@@ -30,6 +30,7 @@ group :test do
 	gem 'simplecov', '~> 0.11.2'
 	gem 'rspec-rails', '~> 3.4.2'
 	gem 'factory_girl_rails', '~> 4.6.0'
+	gem 'rake', '~> 10.5.0'
 end
 
 group :development, :test do
